@@ -45,7 +45,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} dark scroll-smooth`}>
-      <body className="font-sans bg-slate-950 text-slate-100 min-h-screen selection:bg-cyan-500/20 selection:text-cyan-200">
+      <body className="font-sans bg-black text-neutral-100 min-h-screen selection:bg-zinc-800 selection:text-white">
         <div className="min-h-screen bg-grid relative">
           {children}
         </div>
@@ -53,4 +53,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-

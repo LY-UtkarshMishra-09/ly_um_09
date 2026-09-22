@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { portfolioData } from '@/data/portfolioData';
-import { Code2, Menu, X, ArrowUpRight, Sparkles } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Sparkles } from 'lucide-react';
 import { GithubIcon } from './Icons';
 
 export default function Navbar() {
@@ -47,30 +47,30 @@ export default function Navbar() {
       <nav
         className={`max-w-6xl mx-auto rounded-2xl border transition-all duration-300 ${
           scrolled
-            ? 'bg-slate-950/85 backdrop-blur-md border-slate-800/80 shadow-2xl shadow-cyan-950/20 py-3 px-5'
-            : 'bg-slate-900/40 backdrop-blur-sm border-slate-800/40 py-3.5 px-6'
+            ? 'bg-black/95 backdrop-blur-md border-zinc-800 shadow-2xl shadow-black py-3 px-5'
+            : 'bg-zinc-950/80 backdrop-blur-sm border-zinc-850 py-3.5 px-6'
         }`}
       >
         <div className="flex items-center justify-between">
           {/* Logo / Monogram */}
           <a
             href="#hero"
-            className="flex items-center gap-2.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded-lg p-1"
+            className="flex items-center gap-2.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 rounded-lg p-1"
           >
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-cyan-500/20 via-slate-800 to-indigo-500/20 border border-slate-700/60 flex items-center justify-center text-cyan-400 group-hover:border-cyan-400/50 group-hover:scale-105 transition-all">
+            <div className="w-9 h-9 rounded-xl bg-zinc-900 border border-zinc-700/70 flex items-center justify-center text-white group-hover:border-zinc-500 group-hover:scale-105 transition-all">
               <span className="font-mono text-sm font-bold tracking-tight">UM</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-mono text-sm font-semibold text-slate-100 group-hover:text-cyan-300 transition-colors flex items-center gap-1.5">
+              <span className="font-mono text-sm font-semibold text-zinc-100 group-hover:text-white transition-colors flex items-center gap-1.5">
                 Utkarsh Mishra
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
               </span>
-              <span className="text-[10px] text-slate-400 font-mono tracking-tight">JIIT '30 • CS Undergrad</span>
+              <span className="text-[10px] text-zinc-400 font-mono tracking-tight">JIIT '30 • CS Undergrad</span>
             </div>
           </a>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex items-center gap-1 bg-slate-900/60 p-1 rounded-xl border border-slate-800/60">
+          <div className="hidden md:flex items-center gap-1 bg-zinc-900/80 p-1 rounded-xl border border-zinc-800">
             {navLinks.map((link) => {
               const isActive = activeSection === link.href.substring(1);
               return (
@@ -79,8 +79,8 @@ export default function Navbar() {
                   href={link.href}
                   className={`px-3.5 py-1.5 text-xs font-mono rounded-lg transition-all ${
                     isActive
-                      ? 'text-cyan-300 bg-slate-800/90 font-medium shadow-sm border border-cyan-500/30'
-                      : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/40'
+                      ? 'text-white bg-zinc-800 font-medium shadow-sm border border-zinc-700'
+                      : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/40'
                   }`}
                 >
                   {link.name}
@@ -95,14 +95,14 @@ export default function Navbar() {
               href={portfolioData.personal.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-xl text-slate-400 hover:text-slate-100 bg-slate-900/70 border border-slate-800 hover:border-slate-700 transition-all hover:scale-105"
+              className="p-2 rounded-xl text-zinc-400 hover:text-white bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-all hover:scale-105"
               title="GitHub Profile"
             >
               <GithubIcon className="w-4 h-4" />
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 text-white hover:from-cyan-400 hover:to-indigo-500 shadow-md shadow-cyan-500/20 transition-all hover:scale-102 active:scale-98"
+              className="inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3.5 py-2 rounded-xl bg-white text-black hover:bg-zinc-200 shadow-md transition-all hover:scale-102 active:scale-98"
             >
               <Sparkles className="w-3.5 h-3.5" />
               <span>Let's Talk</span>
@@ -112,7 +112,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-xl bg-slate-900/80 border border-slate-800 text-slate-300 hover:text-white"
+            className="md:hidden p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white"
             aria-label="Toggle menu"
           >
             {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -121,23 +121,23 @@ export default function Navbar() {
 
         {/* Mobile Dropdown Drawer */}
         {isOpen && (
-          <div className="md:hidden pt-4 pb-2 border-t border-slate-800/80 mt-3 space-y-2 animate-fadeIn">
+          <div className="md:hidden pt-4 pb-2 border-t border-zinc-800 mt-3 space-y-2">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block px-3 py-2 rounded-lg text-sm font-mono text-slate-300 hover:text-cyan-300 hover:bg-slate-800/60 transition-colors"
+                className="block px-3 py-2 rounded-lg text-sm font-mono text-zinc-300 hover:text-white hover:bg-zinc-800/60 transition-colors"
               >
                 {link.name}
               </a>
             ))}
-            <div className="pt-2 flex items-center gap-2 border-t border-slate-800/60">
+            <div className="pt-2 flex items-center gap-2 border-t border-zinc-800/80">
               <a
                 href={portfolioData.personal.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 flex items-center justify-center gap-2 py-2 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300 hover:text-white"
+                className="flex-1 flex items-center justify-center gap-2 py-2 rounded-lg bg-zinc-900 border border-zinc-800 text-xs font-mono text-zinc-300 hover:text-white"
               >
                 <GithubIcon className="w-4 h-4" />
                 <span>GitHub</span>
@@ -146,7 +146,7 @@ export default function Navbar() {
               <a
                 href="#contact"
                 onClick={() => setIsOpen(false)}
-                className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg bg-cyan-600 text-white text-xs font-mono font-medium hover:bg-cyan-500"
+                className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg bg-white text-black text-xs font-mono font-medium hover:bg-zinc-200"
               >
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Get in touch</span>

@@ -8,7 +8,7 @@ export const portfolioData = {
     status: "Available for Projects & Collaborations",
     email: "utkarshm.0309@gmail.com", // Customizable by user
     github: "https://github.com/LY-UtkarshMishra-09",
-    linkedin: "www.linkedin.com/in/lyutkarshmishra09", // Placeholder ready for handle
+    linkedin: "https://www.linkedin.com/in/lyutkarshmishra09", // Placeholder ready for handle
     twitter: "https://x.com",
     tagline: "Building resilient full-stack systems and next-generation autonomous AI agents.",
     bio: "Computer Science undergraduate at JIIT passionate about turning complex ideas into intuitive, production-grade applications. Specializing in modern web stacks (Next.js, React, TypeScript) and autonomous AI agent architectures.",

@@ -9,16 +9,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        slate: {
-          850: '#151e2e',
-          900: '#0f172a',
-          950: '#030712',
+        dark: {
+          950: '#000000', // Pitch black
+          900: '#09090b', // Deep zinc
+          850: '#121215',
+          800: '#18181b',
+          700: '#27272a',
         },
         accent: {
           emerald: '#10b981',
-          cyan: '#06b6d4',
-          indigo: '#6366f1',
-          blue: '#3b82f6',
+          green: '#22c55e',
         }
       },
       fontFamily: {
@@ -26,8 +26,7 @@ module.exports = {
         mono: ['var(--font-jetbrains-mono)', 'monospace'],
       },
       backgroundImage: {
-        'grid-pattern': "radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.08) 1px, transparent 0)",
-        'glow-gradient': "radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.15), transparent 70%)",
+        'grid-pattern': "radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0)",
       },
       animation: {
         'pulse-subtle': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
@@ -43,4 +42,3 @@ module.exports = {
   },
   plugins: [],
 };
-

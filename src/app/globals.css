@@ -8,45 +8,44 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #030712; /* Slate 950 */
+  background-color: #000000;
 }
 
 body {
-  color: #f1f5f9;
-  background-color: #030712;
+  color: #ededed;
+  background-color: #000000;
   font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   overflow-x: hidden;
 }
 
-/* Subtle Engineering Grid Background Pattern */
+/* Subtle Neutral Grid Background Pattern */
 .bg-grid {
   background-size: 32px 32px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
 }
 
 /* Custom Sleek Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #030712;
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #27272a;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #3f3f46;
 }
 
 /* Focus Outline Accessibility */
 :focus-visible {
-  outline: 2px solid #06b6d4;
+  outline: 2px solid #52525b;
   outline-offset: 2px;
 }
-

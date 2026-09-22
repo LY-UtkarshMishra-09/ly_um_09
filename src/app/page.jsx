@@ -9,7 +9,7 @@ import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen flex flex-col bg-slate-950 text-slate-100">
+    <div className="relative min-h-screen flex flex-col bg-black text-neutral-100">
       {/* Sticky Glassmorphism Navigation */}
       <Navbar />
 
@@ -28,4 +28,3 @@ export default function Home() {
     </div>
   );
 }
-
